@@ -197,18 +197,20 @@ class ADEAgent(Agent.Movies):
     except Exception, e:
       Log('Got an exception while parsing screenshot images %s' %str(e))
 
-    # Background Art From Gallery if it exists
+   # Background Art From Gallery if it exists
     try:
+      galleryurl = None
       gallery = html.xpath('//div[@class="user-action"]/a[contains(@class, "gallery")]')
       for url in gallery:
         galleryurl = ADE_BASEURL + url.attrib['href']
-    
-      gallery = HTML.ElementFromURL(galleryurl)
-      imagelist = gallery.xpath('//div/a[contains(@class, "thumb fancy")]')
+        Log("galleryurl = " + galleryurl)
+      if galleryurl is not None:   
+        gallery = HTML.ElementFromURL(galleryurl)
+        imagelist = gallery.xpath('//div/a[contains(@class, "thumb fancy")]')
       
-      for imgs in imagelist:
-        imageurl = imgs.attrib['href']
-        image = HTTP.Request(imageurl)
-        metadata.art[imageurl] = Proxy.Media(image)
+        for imgs in imagelist:
+          imageurl = imgs.attrib['href']
+          image = HTTP.Request(imageurl)
+          metadata.art[imageurl] = Proxy.Media(image)
     except Exception, e:
         Log('Got an exception while parsing gallery images %s' %str(e))
