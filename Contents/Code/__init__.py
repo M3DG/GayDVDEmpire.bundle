@@ -203,7 +203,6 @@ class ADEAgent(Agent.Movies):
       gallery = html.xpath('//div[@class="user-action"]/a[contains(@class, "gallery")]')
       for url in gallery:
         galleryurl = ADE_BASEURL + url.attrib['href']
-        Log("galleryurl = " + galleryurl)
       if galleryurl is not None:   
         gallery = HTML.ElementFromURL(galleryurl)
         imagelist = gallery.xpath('//div/a[contains(@class, "thumb fancy")]')
