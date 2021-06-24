@@ -2,19 +2,10 @@
 
 Plex metadata agent for fetching metadata for AdultDVDEmpire material.
 
-20181014:
+20210624
 
-Old code:
-- Cast Photos
-- Director
-- Genres
+Update to fix issues created by a Plex update.
 
-New Code:
-- Background Photos
-- Average Comment Rating
-- Series Collection Tag
+Adds:
+Option to make the studio name a collection tag, off by default
 
-Updated:
-- Cast is filtered to remove links/content not related to cast names.
-- Product info div to match different div locations, first code missed many releases.
-- Code formatting
