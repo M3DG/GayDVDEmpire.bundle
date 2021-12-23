@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>AdultDVDEmpire</string>
+	<string>GayDVDEmpire</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.plexapp.agents.adultdvdempire</string>
+	<string>com.plexapp.agents.gaydvdempire</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>

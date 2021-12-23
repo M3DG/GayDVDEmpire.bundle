@@ -23,7 +23,7 @@ else:
 if DEBUG:Log('Search Type: %s' % str(preference['searchtype']))
 
 # URLS
-ADE_BASEURL = 'http://www.adultdvdempire.com'
+ADE_BASEURL = 'https://www.gaydvdempire.com'
 ADE_SEARCH_MOVIES = ADE_BASEURL + '/' + searchtype + '/search?view=list&q=%s'
 ADE_MOVIE_INFO = ADE_BASEURL + '/%s/'
 
